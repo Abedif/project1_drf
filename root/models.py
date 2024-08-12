@@ -40,7 +40,7 @@ class Skill(models.Model):
 class Testimonial(models.Model):
     user = models.ForeignKey(User , on_delete=models.CASCADE)
     description = models.TextField(null=False , blank=False)
-    image = models.ImageField(upload_to='root' , default='default.jpg')
+    image = models.ImageField(upload_to='root' , default='default.png')
     skill = models.ManyToManyField(skill)
     status = models.BooleanField(default=False)
     created_at = models.DateField(auto_now_add=True)
